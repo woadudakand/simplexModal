@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Modal</title>
+	<link rel="stylesheet" href="atmodal.css">
+</head>
+
+<body>
+
+	<div class="at-modal atm-fade" id="modal">
+		<div class="at-modal-content">
+			<a href="#" class="at-modal-close">&times;</a>
+			<h1>modal 1</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ea esse adipisci, hic saepe accusantium
+				voluptas qui commodi dolorem. Modi.</p>
+		</div>
+	</div>
+
+	<div class="at-modal atm-fade" id="modal2">
+		<div class="at-modal-content at-modal-lg">
+			<a href="#" class="at-modal-close">&times;</a>
+			<h1>modal 2</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, atque?</p>
+		</div>
+	</div>
+
+
+
+	<a href="#" data-target="modal">Modal</a>
+	<a href="#" data-target="modal2">Modal2</a>
+	<p data-target="modal2">Modal2</p>
+
+	<script src="atmodal.js"></script>
+	<script>
+		aazztechModal('#modal, #modal2');
+	</script>
+</body>
+
+</html>

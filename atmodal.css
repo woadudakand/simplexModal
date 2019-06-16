@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+}
+
+body:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.at-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+
+.at-modal-content {
+    position: absolute;
+    width: 500px;
+    min-height: 300px;
+    z-index: 9999;
+    background: #fff;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.at-modal-content.at-modal-lg {
+    width: 800px;
+}
+
+.at-modal-content.at-modal-xl {
+    width: 1140px;
+}
+
+.at-modal-content.at-modal-sm {
+    width: 300px;
+}
+
+.at-modal.atm-fade {
+    transition: .3s ease;
+}
+
+.at-modal.atm-fade:not(.atm-show) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.at-modal.atm-show .at-modal-content {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease;
+}
